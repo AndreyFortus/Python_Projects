@@ -1,13 +1,13 @@
 def calculator():
-    #  math_oper_list = ['+', '-', '/', '*', 'mod', 'pow', 'div']
     ops = {
-    '+' : lambda x, y: x + y,
-    '-' : lambda x, y: x + y,
-    '*' : lambda x, y: x * y,
-    '/' : lambda x, y: x / y,
-    '%' : lambda x, y: x % y,
-    '^' : lambda x, y: pow(x, y),
-}
+        '+': lambda x, y: x + y,
+        '-': lambda x, y: x + y,
+        '*': lambda x, y: x * y,
+        '/': lambda x, y: x / y,
+        'mod': lambda x, y: x % y,
+        'pow': lambda x, y: pow(x, y),
+        'div': lambda x, y: x // y
+    }
 
     try:
         num_1 = float(input('Input first number: '))
@@ -21,3 +21,6 @@ def calculator():
         return 'Incorrect value!'
     except ZeroDivisionError:
         return 'Divided by zero!'
+
+
+print(calculator())
