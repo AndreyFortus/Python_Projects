@@ -19,5 +19,5 @@ def numbers(list_num):
     return list_num_with_ends
 
 
-list_num = np.arange(1, 10, 1)
-print(numbers(list_num))
+list_numbers = np.arange(1, 10, 1)
+print(numbers(list_numbers))

@@ -1,8 +1,7 @@
 def binary_convert(num_dec):
     result = ''
     while num_dec != 0:
-        r = num_dec % 2
-        result += f'{r}'
+        result += f'{num_dec % 2}'
         num_dec //= 2
     return result[::-1]
 

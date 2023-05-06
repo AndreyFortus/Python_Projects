@@ -5,7 +5,7 @@ def calculator():
         '*': lambda x, y: x * y,
         '/': lambda x, y: x / y,
         'mod': lambda x, y: x % y,
-        'pow': lambda x, y: pow(x, y),
+        'pow': lambda x, y: x ** y,
         'div': lambda x, y: x // y
     }
 
@@ -15,12 +15,13 @@ def calculator():
         operation = input('Input math operation: ')
         for operator in ops:
             if operation == operator:
-                return ops[operation](num_1, num_2)
+                return f'answer = {ops[operation](num_1, num_2)}'
 
     except ValueError:
         return 'Incorrect value!'
     except ZeroDivisionError:
         return 'Divided by zero!'
+    return 'Error!'
 
 
 print(calculator())

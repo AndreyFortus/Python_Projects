@@ -8,6 +8,6 @@ def count_numbers():
                 return count
         except ValueError:
             print('Your input is incorrect! Must be integer value.')
-            
+
 
 print(count_numbers())

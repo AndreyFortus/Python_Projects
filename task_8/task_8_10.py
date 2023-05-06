@@ -3,7 +3,7 @@ def chess():
     if 104 < ord(coord[0]) or 57 > ord(coord[0])\
             or 57 < ord(coord[1]) or 49 > ord(coord[1]):
         return 'Out of chess field'
-    elif ord(coord[0]) % 2 == 1 and ord(coord[1]) % 2 == 1:
+    if ord(coord[0]) % 2 == 1 and ord(coord[1]) % 2 == 1:
         return 'square is black'
     return 'square is white'
 
