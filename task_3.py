@@ -18,7 +18,7 @@ while True:
         if z - pow(x, 3) / 3 == 0:
             print("z - pow(x, 3) / 3 shouldn't equal zero !")
             continue
-        elif pow(z, 2) - math.fabs(pow(x, 2) / (z - pow(x, 3) / 3)) == 0:
+        if pow(z, 2) - math.fabs(pow(x, 2) / (z - pow(x, 3) / 3)) == 0:
             print("pow(z, 2) - math.fabs(pow(x, 2) / (z - pow(x, 3) / 3))) shouldn't equal zero!")
             continue
     except ValueError:

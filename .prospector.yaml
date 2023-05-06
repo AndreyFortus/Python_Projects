@@ -36,3 +36,7 @@ pylint:
         # Used builtin function 'filter'.
         # (For maintainability, one should prefer list comprehension.)
         - W0141
+        # Missing-timeout argument
+        - W3101
+        # Override method
+        - W0221

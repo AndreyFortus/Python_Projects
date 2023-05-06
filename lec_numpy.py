@@ -1,14 +1,14 @@
 # NumPy Exercises
-import numpy as np
-from PIL import Image
-import requests
 from io import BytesIO
+from PIL import Image
 from scipy.signal import argrelextrema
+
+import numpy as np
+import requests
 
 # level №1
 print('\ntask 1\n', np.__version__)
 
-n = 1
 np1 = np.arange(10)
 print('\ntask 2\n', np1)
 
@@ -45,14 +45,14 @@ np9_b = np.where(np9_a < 10, 10, np.where(np9_a > 30, 30, np9_a))
 print('\ntask 47\n', np9_b)
 
 # this task isn't solved by me, task use as example how to work with links
-url_25 = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
-iris = np.genfromtxt(url_25, delimiter=',', dtype='object')
+URL_25 = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+iris = np.genfromtxt(URL_25, delimiter=',', dtype='object')
 names = ('sepallength', 'sepalwidth', 'petallength', 'petalwidth', 'species')
 print('\ntask №25\n', iris[: 3])
 
 # level №3
-url_34 = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
-iris_2d = np.genfromtxt(url_34, delimiter=',', dtype='float', usecols=[0, 1, 2, 3])
+URL_34 = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+iris_2d = np.genfromtxt(URL_34, delimiter=',', dtype='float', usecols=[0, 1, 2, 3])
 filt_rows = (iris_2d[:, 2] > 1.5) & (iris_2d[:, 0] < 5.0)
 print('\ntask №34\n', iris_2d[filt_rows])
 
@@ -64,7 +64,7 @@ m[np.unique(a_58, return_index=True)[1]] = True
 print(np.invert(m, dtype=bool))
 
 URL_60 = 'https://upload.wikimedia.org/wikipedia/commons/8/8b/Denali_Mt_McKinley.jpg'
-response_60 = requests.get(URL_60)
+response_60 = requests.get(URL_60, 1)
 img_60 = Image.open(BytesIO(response_60.content))
 numpydata = np.asarray(img_60)
 print('\ntask №60\n', numpydata)
