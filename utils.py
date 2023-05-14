@@ -3,4 +3,4 @@ def int_checker():
         number = int(input('Input your number: '))
         return number
     except ValueError:
-        print('Your input is incorrect! Must be integer value.')
+        return 'Your input is incorrect! Must be integer value.'

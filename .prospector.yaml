@@ -40,3 +40,7 @@ pylint:
         - W3101
         # Override method
         - W0221
+        # Expression is assigned to nothing
+        - W0106
+        # Too many booleans
+        - R0916
