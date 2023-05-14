@@ -1,14 +1,23 @@
 def money():
-    nominal_list = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000]
-    person_list = ['Volodimir The Great', 'Yaroslav the Wise', 'Bohdan Khmelnytsky',
-                   'Ivan Mazepa', 'Ivan Mazepa', 'Mykhailo Hrushevskyi',
-                   'Taras Shevchenko', 'Lesia Ukrainka', 'Hryhorii Skovoroda',
-                   'Volodymyr Vernadskyi']
+
+    money_dict = {
+        1: 'Volodimir The Great',
+        2: 'Yaroslav the Wise',
+        5: 'Bohdan Khmelnytsky',
+        10: 'Ivan Mazepa',
+        20: 'Ivan Franko',
+        50: 'Mykhailo Hrushevskyi',
+        100: 'Taras Shevchenko',
+        200: 'Lesia Ukrainka',
+        500: 'Hryhorii Skovoroda',
+        1000: 'Volodymyr Vernadskyi'
+
+    }
+
     try:
         nominal = int(input('Input nominal: '))
-        for i, __ in enumerate(nominal_list):
-            if nominal == nominal_list[i]:
-                return f'{person_list[i]} is depicted on {nominal_list[i]} hryvnias'
+        if nominal in money_dict:
+            return f'{money_dict[nominal]} is depicted on {nominal} hryvnias'
     except ValueError:
         return 'Incorrect nominal! Try again'
 

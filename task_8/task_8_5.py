@@ -1,21 +1,18 @@
+from task_8_6 import year_check
+
+
 def month_check():
-    month_list = ['january', 'march', 'april', 'may', 'june',
-                  'july', 'august', 'september', 'october', 'november', 'december']
-    days_list = [31, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    month_dict = {
+        'january': 31, 'march': 31, 'may': 31, 'july': 31, 'august': 31, 'october': 31, 'december': 31,
+        'april': 30, 'june': 30, 'september': 30, 'november': 30
+    }
     while True:
         month = input('Input month for more info: ')
-        for i, __ in enumerate(month_list):
-            if month.lower() == month_list[i]:
-                return f'in {month} {days_list[i]} days'
-            if month.lower() == 'february':
-                try:
-                    year = int(input('Input year: '))
-                    if year % 4 == 0:
-                        return f' in {year} in {month} 29 days'
-                    return f'in {year} in {month} 28 days'
-                except ValueError:
-                    print('Try input correct year!')
-        print('Try input correct month!')
+        if month.lower() in month_dict:
+            return f'in {month} {month_dict[month]} days'
+        if month.lower() == 'february':
+            year = int(input('Input year: '))
+            return year_check(year)
 
 
 print(month_check())

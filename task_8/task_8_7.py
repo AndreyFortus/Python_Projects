@@ -1,8 +1,11 @@
+from utils import int_checker
+
+
 def count_numbers():
     count = 0
     while True:
         try:
-            num = int(input('Input your number (0 stop program!): '))
+            num = int_checker()
             count += num
             if num == 0:
                 return count

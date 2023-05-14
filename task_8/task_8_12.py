@@ -7,11 +7,9 @@ def game():
         computer_choice = random.choice(["Rock", "Paper", "Scissors"])
         if text == computer_choice:
             result = "Tie"
-        elif text == "rock" and computer_choice == "Scissors":
-            result = "Player wins"
-        elif text == "paper" and computer_choice == "Rock":
-            result = "Player wins"
-        elif text == "scissors" and computer_choice == "Paper":
+        elif text == "rock" and computer_choice == "Scissors" or\
+                text == "paper" and computer_choice == "Rock" or\
+                text == "scissors" and computer_choice == "Paper":
             result = "Player wins"
         elif text == 'exit':
             return 'Thx for playing!'

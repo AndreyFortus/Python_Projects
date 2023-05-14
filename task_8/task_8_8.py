@@ -13,9 +13,8 @@ def calculator():
         num_1 = float(input('Input first number: '))
         num_2 = float(input('Input second number: '))
         operation = input('Input math operation: ')
-        for operator in ops:
-            if operation == operator:
-                return f'answer = {ops[operation](num_1, num_2)}'
+        if operation in ops:
+            return f'answer = {ops[operation](num_1, num_2)}'
 
     except ValueError:
         return 'Incorrect value!'
