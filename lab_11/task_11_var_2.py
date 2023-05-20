@@ -1,8 +1,10 @@
 import re
 
+from const_file import PATH
+
 
 def separate_text():
-    with open('C:/Users/Andrii/Desktop/lab_11/text_example.txt', 'r', encoding='utf-8') as file:
+    with open(PATH + 'text_example.txt', 'r', encoding='utf-8') as file:
         text = file.read()
     pattern = r'(?<=[.!?])\s+'
     return re.split(pattern, text)

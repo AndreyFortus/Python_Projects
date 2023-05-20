@@ -1,8 +1,10 @@
 import re
 
+from const_file import PATH
+
 
 def find_year():
-    with open('C:/Users/Andrii/Desktop/lab_11/text_with_dates.txt', 'r', encoding='utf-8') as file:
+    with open(PATH + 'text_with_dates.txt', 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
     pattern = r'\b\d{3,4}\b'

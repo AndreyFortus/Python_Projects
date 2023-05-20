@@ -1,5 +1,7 @@
 import re
 
+from const_file import PATH
+
 
 def replace_date(match):
 
@@ -15,7 +17,7 @@ def replace_date(match):
 
 
 def main():
-    with open('C:/Users/Andrii/Desktop/lab_11/date.txt', 'r', encoding='utf-8') as file_date:
+    with open(PATH + 'date.txt', 'r', encoding='utf-8') as file_date:
         text = file_date.read()
 
     pattern = r'\b((0?[1-9]|[12]\d|3[01])[./]' \
@@ -24,7 +26,7 @@ def main():
 
     new_text = re.sub(pattern, replace_date, text)
 
-    with open('C:/Users/Andrii/Desktop/lab_11/sorted_date.txt', 'w', encoding='utf-8') as file_sort:
+    with open(PATH + 'sorted_date.txt', 'w', encoding='utf-8') as file_sort:
         file_sort.write(new_text)
 
 
