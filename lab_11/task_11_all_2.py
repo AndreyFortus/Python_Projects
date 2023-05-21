@@ -1,6 +1,6 @@
 import re
 
-from const_file import PATH
+from constants import PATH
 
 
 def find_year():
@@ -18,5 +18,9 @@ def find_year():
     for year, line_number in years_list:
         print(f'Year: {year}, row: {line_number}')
 
+def main():
+    find_year()
 
-find_year()
+
+if __name__ == '__main__':
+    main()

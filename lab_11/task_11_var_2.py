@@ -1,6 +1,6 @@
 import re
 
-from const_file import PATH
+from constants import PATH
 
 
 def separate_text():
@@ -17,4 +17,5 @@ def main():
         i += 1
 
 
-main()
+if __name__ == '__main__':
+    main()

@@ -1,6 +1,6 @@
 import re
 
-from const_file import PATH
+from constants import PATH
 
 
 def replace_date(match):
@@ -30,4 +30,5 @@ def main():
         file_sort.write(new_text)
 
 
-main()
+if __name__ == '__main__':
+    main()
